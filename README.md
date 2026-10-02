@@ -6,7 +6,7 @@ grounded in your actual sources, not hallucinated.
 
 ## Features
 - Multi-source ingestion: PDFs (including scanned/OCR), YouTube transcripts, plain text
-- Sentence-aware recursive chunking with overlap — preserves context across chunk boundaries instead of cutting sentences mid-way
+- Sentence-aware recursive chunking with overlap for PDFs and text files — preserves context across chunk boundaries instead of cutting sentences mid-way. YouTube transcripts use time-windowed chunking with the same overlap idea instead, since auto-generated captions are unpunctuated running text with no sentence boundaries to split on
 - Hybrid retrieval: FAISS dense vector search (meaning-based) + BM25 sparse keyword search, fused via Reciprocal Rank Fusion — catches both semantic matches and exact terms (acronyms, IDs, proper nouns) that embeddings alone tend to miss
 - Grounded AI answers using Google's Gemini API
 - Conversational follow-ups — remembers recent context for questions like "explain more"

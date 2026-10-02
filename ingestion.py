@@ -127,32 +127,43 @@ def ingest_text_file(filepath, chunk_size=500, overlap=50):
     return chunks
 
 
-def ingest_youtube(video_id, chunk_seconds=60):
+def ingest_youtube(video_id, chunk_seconds=60, overlap_chars=50):
+    """
+    Auto-generated YouTube captions are typically unpunctuated running text,
+    so the sentence-aware splitter (chunk_text) doesn't apply here — there
+    are no sentence boundaries to find. Chunking is by time window instead,
+    with the same trailing-text overlap idea as chunk_text for consistency
+    across chunk boundaries.
+    """
     ytt_api = YouTubeTranscriptApi()
     transcript = ytt_api.fetch(video_id)
 
-    chunks = []
+    if not transcript.snippets:
+        return []
+
+    raw_chunks = []  # (text, start_time)
     current_text = ""
     current_start = transcript.snippets[0].start
 
     for snippet in transcript.snippets:
         if snippet.start - current_start > chunk_seconds and current_text:
-            chunks.append({
-                "text": current_text.strip(),
-                "source": f"youtube:{video_id}",
-                "source_type": "youtube",
-                "location": format_timestamp(current_start)
-            })
+            raw_chunks.append((current_text.strip(), current_start))
             current_text = ""
             current_start = snippet.start
         current_text += " " + snippet.text
 
     if current_text:
+        raw_chunks.append((current_text.strip(), current_start))
+
+    chunks = []
+    for i, (text, start) in enumerate(raw_chunks):
+        if i > 0 and overlap_chars > 0:
+            text = f"{raw_chunks[i - 1][0][-overlap_chars:]} {text}"
         chunks.append({
-            "text": current_text.strip(),
+            "text": text,
             "source": f"youtube:{video_id}",
             "source_type": "youtube",
-            "location": format_timestamp(current_start)
+            "location": format_timestamp(start)
         })
     return chunks
 

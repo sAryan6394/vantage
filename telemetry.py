@@ -5,12 +5,11 @@ from datetime import datetime, timezone
 
 DB_PATH = os.getenv("TELEMETRY_DB_PATH", "rag_telemetry.db")
 
-# Gemini 3.6 Flash promotional pricing (Google's published rate, in effect
-# through Dec 31, 2026): $0.75 / 1M input tokens, $3.75 / 1M output tokens.
-# Standard pricing after that date is $1.50 / $7.50 — update these two
-# constants if you switch models or the promo period ends.
-INPUT_PRICE_PER_1M_TOKENS = 0.75
-OUTPUT_PRICE_PER_1M_TOKENS = 3.75
+# gemini-3.1-flash-lite pricing (Google's published rate):
+# $0.25 / 1M input tokens, $1.50 / 1M output tokens.
+# Update these two constants any time the generation model in app.py changes.
+INPUT_PRICE_PER_1M_TOKENS = 0.25
+OUTPUT_PRICE_PER_1M_TOKENS = 1.50
 
 _SCHEMA = """
 CREATE TABLE IF NOT EXISTS rag_telemetry_logs (

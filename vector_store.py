@@ -89,6 +89,31 @@ class VectorStore:
             results.append((float(score), self.chunks[idx]))
         return results
 
+    def remove_source(self, source):
+        """
+        Removes every chunk belonging to `source`. FAISS's HNSW index has no
+        safe arbitrary-deletion API (the graph structure doesn't support it),
+        so this rebuilds a fresh index instead — but reconstructs the kept
+        vectors straight from the existing index (HNSWFlat's storage is a
+        plain flat array under the hood) rather than re-running the encoder
+        model on anything.
+        """
+        keep_indices = [i for i, c in enumerate(self.chunks) if c["source"] != source]
+        if len(keep_indices) == len(self.chunks):
+            return  # nothing matched that source
+
+        kept_chunks = [self.chunks[i] for i in keep_indices]
+        kept_vectors = (
+            np.array([self.index.reconstruct(i) for i in keep_indices], dtype="float32")
+            if keep_indices else np.empty((0, self.dim), dtype="float32")
+        )
+
+        self.index = self._new_index()
+        self.chunks = kept_chunks
+        if len(kept_chunks) > 0:
+            self.index.add(kept_vectors)
+        self._persist()
+
     def clear(self):
         self.index = self._new_index()
         self.chunks = []
