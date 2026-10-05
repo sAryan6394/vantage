@@ -1,0 +1,722 @@
+[
+ {
+  "id": 1,
+  "question": "How can you ensure that headings and body text maintain consistent formatting throughout a dashboard report?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "166:49"
+ },
+ {
+  "id": 2,
+  "question": "How can you adjust an existing hourly rate in a database query to calculate the potential impact of a five-dollar increase or decrease?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "55:10"
+ },
+ {
+  "id": 3,
+  "question": "What are some examples of advanced DAX applications that go beyond the scope of this course?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "397:08"
+ },
+ {
+  "id": 4,
+  "question": "What two arguments are provided to the lambda function when formatting axis tick labels?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "2009:58"
+ },
+ {
+  "id": 5,
+  "question": "How can you identify records where the industry field is missing in one table but populated in another during a join operation?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "201:19"
+ },
+ {
+  "id": 6,
+  "question": "What challenges do educators face when trying to evaluate the effectiveness of their teaching methods or classroom tools?",
+  "source": "youtube:t2oOFs4WgI0",
+  "location": "10:16"
+ },
+ {
+  "id": 7,
+  "question": "How can data analysts combine multiple data frames into a single set?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "453:31"
+ },
+ {
+  "id": 8,
+  "question": "How can you update the data in an Excel table if the original information on the source website changes?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "28:39"
+ },
+ {
+  "id": 9,
+  "question": "How can you filter a database query to display only the job postings from January?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "140:53"
+ },
+ {
+  "id": 10,
+  "question": "How can you modify the column labels and display sequence within a slicer?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "459:28"
+ },
+ {
+  "id": 11,
+  "question": "What is the correct way to compare two values for equality in Python to avoid a syntax error?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "1551:59"
+ },
+ {
+  "id": 12,
+  "question": "How can you categorize employees earning more than $70,000 as highly paid in a database query?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "72:27"
+ },
+ {
+  "id": 13,
+  "question": "Why is it necessary to personally examine raw data instead of relying on automated systems?",
+  "source": "youtube:t2oOFs4WgI0",
+  "location": "4:09"
+ },
+ {
+  "id": 14,
+  "question": "How do you retrieve all the items in a list using slicing?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "102:02"
+ },
+ {
+  "id": 15,
+  "question": "How can you quickly remove all filters applied to an Excel spreadsheet?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "6:09"
+ },
+ {
+  "id": 16,
+  "question": "Where are comparison and logical operators typically used when filtering data?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "33:43"
+ },
+ {
+  "id": 17,
+  "question": "How can a user navigate between different filtered and unfiltered views of a dataset using bookmarks and buttons?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "198:02"
+ },
+ {
+  "id": 18,
+  "question": "How can you extract a specific number of characters from the end of a string?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "428:25"
+ },
+ {
+  "id": 19,
+  "question": "How is a salary increase calculated for employees earning less than 50,000?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "90:54"
+ },
+ {
+  "id": 20,
+  "question": "Why is there a disconnect between the work being done by academic researchers and the needs of classroom teachers?",
+  "source": "youtube:t2oOFs4WgI0",
+  "location": "11:20"
+ },
+ {
+  "id": 21,
+  "question": "Which technical skills should a data professional prioritize based on their impact on compensation?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "661:31"
+ },
+ {
+  "id": 22,
+  "question": "How can a user view performance data for a specific representative within the chart?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "193:27"
+ },
+ {
+  "id": 23,
+  "question": "Why should certain folders be excluded when uploading a project to GitHub?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "188:47"
+ },
+ {
+  "id": 24,
+  "question": "What is the purpose of a funnel chart in data visualization?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "145:02"
+ },
+ {
+  "id": 25,
+  "question": "How can you visually highlight the highest and lowest values within a spreadsheet table?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "520:18"
+ },
+ {
+  "id": 26,
+  "question": "Why is it risky to delete columns directly from a raw data set during the cleaning process?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "167:37"
+ },
+ {
+  "id": 27,
+  "question": "What does a system conversion involve when moving from a legacy mainframe to a modern platform?",
+  "source": "youtube:t2oOFs4WgI0",
+  "location": "2:05"
+ },
+ {
+  "id": 28,
+  "question": "How can you select every second item from a combined list of skills in Python?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "104:05"
+ },
+ {
+  "id": 29,
+  "question": "How can you display only the top five highest salaries from a data set in Excel?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "71:40"
+ },
+ {
+  "id": 30,
+  "question": "How can you make a specific project more prominent on your GitHub profile?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "243:56"
+ },
+ {
+  "id": 31,
+  "question": "What is the primary purpose of using DAX in Power BI?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "393:01"
+ },
+ {
+  "id": 32,
+  "question": "Why does a line chart displaying job postings appear disorganized and difficult to interpret?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "1191:20"
+ },
+ {
+  "id": 33,
+  "question": "Why is it important to use descriptive names when creating temporary tables in a professional database environment?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "132:52"
+ },
+ {
+  "id": 34,
+  "question": "What kind of tasks were involved in the early analytics roles that followed a mathematics degree?",
+  "source": "youtube:t2oOFs4WgI0",
+  "location": "0:02"
+ },
+ {
+  "id": 35,
+  "question": "How can you remove null values from a data frame before applying a function to a column?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "463:42"
+ },
+ {
+  "id": 36,
+  "question": "Which versions of Excel support the use of the filter and choose columns functions?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "63:28"
+ },
+ {
+  "id": 37,
+  "question": "How can a SQL query be modified to sort results by average salary rather than by demand?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "229:38"
+ },
+ {
+  "id": 38,
+  "question": "What specific technical skills should be highlighted for the second half of the course?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "497:14"
+ },
+ {
+  "id": 39,
+  "question": "How can you count the number of cells in a spreadsheet range that contain a value less than or equal to five?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "349:58"
+ },
+ {
+  "id": 40,
+  "question": "How can the readability of aggregated columns in a database query be improved?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "104:13"
+ },
+ {
+  "id": 41,
+  "question": "What are the negative consequences of rushing through data analysis tasks?",
+  "source": "youtube:t2oOFs4WgI0",
+  "location": "6:12"
+ },
+ {
+  "id": 42,
+  "question": "How can you view a complete list of all the built-in functions currently available in Python?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "173:45"
+ },
+ {
+  "id": 43,
+  "question": "How can you automatically extract a list of employees who earn over 100,000 in Excel?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "58:21"
+ },
+ {
+  "id": 44,
+  "question": "How many local data analyst job openings are available in New York?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "149:03"
+ },
+ {
+  "id": 45,
+  "question": "Which table should be used to analyze individual skills associated with different job postings?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "433:50"
+ },
+ {
+  "id": 46,
+  "question": "How can you set up a two-input data table to calculate total salary based on varying annual raises and bonuses?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "669:32"
+ },
+ {
+  "id": 47,
+  "question": "How can a row be removed from a database table after identifying it with a specific row number?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "176:50"
+ },
+ {
+  "id": 48,
+  "question": "What initial steps are taken before beginning a new project?",
+  "source": "youtube:t2oOFs4WgI0",
+  "location": "7:13"
+ },
+ {
+  "id": 49,
+  "question": "How can you remove missing values from a specific column while using a grouping function in pandas?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "312:30"
+ },
+ {
+  "id": 50,
+  "question": "How can you update null values in a dataset to make them easier to filter later?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "35:48"
+ },
+ {
+  "id": 51,
+  "question": "What is the primary purpose of using subqueries and CTEs in SQL?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "150:06"
+ },
+ {
+  "id": 52,
+  "question": "What is the purpose of a drill-through feature in a dashboard?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "219:25"
+ },
+ {
+  "id": 53,
+  "question": "Which visualizations are used to display job count data in the report?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "1140:11"
+ },
+ {
+  "id": 54,
+  "question": "Which countries have experienced the highest number of job losses according to the data?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "219:44"
+ },
+ {
+  "id": 55,
+  "question": "How did the narrator determine the best way to track and report incoming freshman students within the new computer system?",
+  "source": "youtube:t2oOFs4WgI0",
+  "location": "3:07"
+ },
+ {
+  "id": 56,
+  "question": "How do you define and execute a basic function in Python?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "29:24"
+ },
+ {
+  "id": 57,
+  "question": "How can the visual appearance of a chart be customized to make the lines appear thicker and the bar colors more distinct?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "192:25"
+ },
+ {
+  "id": 58,
+  "question": "How do primary and foreign keys differ when creating SQL tables?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "123:32"
+ },
+ {
+  "id": 59,
+  "question": "How can you display the median yearly salary when hovering over a specific country on a map?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "131:43"
+ },
+ {
+  "id": 60,
+  "question": "How can you calculate the median yearly salary for each job title when using a pivot table?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "1878:58"
+ },
+ {
+  "id": 61,
+  "question": "Why is it necessary to use a delimiter when creating a stored procedure?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "139:59"
+ },
+ {
+  "id": 62,
+  "question": "How can data analysis bridge the gap between academic research and practical application?",
+  "source": "youtube:t2oOFs4WgI0",
+  "location": "12:20"
+ },
+ {
+  "id": 63,
+  "question": "How can a user retrieve a detailed overview and list of available methods for a specific Python data type?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "47:42"
+ },
+ {
+  "id": 64,
+  "question": "How can the formula bar be enabled in Excel for Power Query?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "26:38"
+ },
+ {
+  "id": 65,
+  "question": "What are the minimum and maximum salary figures for data analysts?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "63:21"
+ },
+ {
+  "id": 66,
+  "question": "How can you calculate the ratio of required skills to job postings while avoiding potential division by zero errors?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "435:54"
+ },
+ {
+  "id": 67,
+  "question": "How can a pivot table be set up to display the count of job postings organized by job title and month?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "615:32"
+ },
+ {
+  "id": 68,
+  "question": "How can you combine multiple columns into a single column while including a space between them in MySQL?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "85:46"
+ },
+ {
+  "id": 69,
+  "question": "How does the onboarding process for a position in higher education differ from traditional office roles?",
+  "source": "youtube:t2oOFs4WgI0",
+  "location": "1:05"
+ },
+ {
+  "id": 70,
+  "question": "How can the horizontal alignment of chart labels be adjusted to ensure they align correctly with their corresponding tick marks?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "339:02"
+ },
+ {
+  "id": 71,
+  "question": "How can you prevent Excel from using the \"GETPIVOTDATA\" function when referencing a value from a pivot table?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "177:04"
+ },
+ {
+  "id": 72,
+  "question": "Why should an inner join be used instead of a left join when connecting job data with skills information?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "204:04"
+ },
+ {
+  "id": 73,
+  "question": "Which specific columns in the dataset are the primary focus for this course?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "41:50"
+ },
+ {
+  "id": 74,
+  "question": "How do you install VS Code on a computer?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "1829:04"
+ },
+ {
+  "id": 75,
+  "question": "How can you acquire the script file needed to create the database for this series?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "7:10"
+ },
+ {
+  "id": 76,
+  "question": "What field of study did the narrator pursue while balancing professional and family responsibilities?",
+  "source": "youtube:t2oOFs4WgI0",
+  "location": "8:15"
+ },
+ {
+  "id": 77,
+  "question": "What does the term \"Dunder\" refer to when discussing specific types of programming methods?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "57:56"
+ },
+ {
+  "id": 78,
+  "question": "How can you display an individual's picture and specific data insights when selecting them in a dashboard?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "232:21"
+ },
+ {
+  "id": 79,
+  "question": "How can you improve the readability of code snippets within a markdown file?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "239:51"
+ },
+ {
+  "id": 80,
+  "question": "What information should be included in the conclusion of a project readme?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "244:55"
+ },
+ {
+  "id": 81,
+  "question": "Why does a \"numbum\" error appear when calculating quartiles?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "382:31"
+ },
+ {
+  "id": 82,
+  "question": "How does the \"like\" statement differ from using an equals sign when searching for data?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "29:35"
+ },
+ {
+  "id": 83,
+  "question": "What are the common biases that can lead to errors when performing data analysis?",
+  "source": "youtube:t2oOFs4WgI0",
+  "location": "5:11"
+ },
+ {
+  "id": 84,
+  "question": "How can multiple columns be included when performing data aggregations?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "306:22"
+ },
+ {
+  "id": 85,
+  "question": "How can a custom financial year be defined and incorporated into an Excel pivot table?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "142:12"
+ },
+ {
+  "id": 86,
+  "question": "Why did the query run significantly faster after adding a limit clause?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "210:13"
+ },
+ {
+  "id": 87,
+  "question": "Where can the files and materials needed for this course be found?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "9:11"
+ },
+ {
+  "id": 88,
+  "question": "What benefits do supporters receive if they choose to purchase additional resources for this course?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "927:42"
+ },
+ {
+  "id": 89,
+  "question": "How do you calculate a running sum of monthly totals using a common table expression in SQL?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "228:52"
+ },
+ {
+  "id": 90,
+  "question": "How did the speaker become interested in participating in professional conferences?",
+  "source": "youtube:t2oOFs4WgI0",
+  "location": "9:15"
+ },
+ {
+  "id": 91,
+  "question": "How can you make a newly created Conda environment appear as an option within a Jupyter notebook in VS Code?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "374:46"
+ },
+ {
+  "id": 92,
+  "question": "How can data cleaning steps be automated so they don't have to be performed manually each time new information is added?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "22:32"
+ },
+ {
+  "id": 93,
+  "question": "How do the data types for date and time differ in their functionality?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "106:16"
+ },
+ {
+  "id": 94,
+  "question": "What is the most effective way to resolve a \"data source not found\" error when working with Power Query?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "390:56"
+ },
+ {
+  "id": 95,
+  "question": "Why might you need to use the reset index method after filtering a data frame?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "1886:10"
+ },
+ {
+  "id": 96,
+  "question": "How can you connect two tables that do not share a common column?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "67:18"
+ },
+ {
+  "id": 97,
+  "question": "How can one resolve the tqdm progress bar warning message when using Jupyter?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "391:06"
+ },
+ {
+  "id": 98,
+  "question": "Why does the data in the pivot table appear disorganized or lopsided?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "154:33"
+ },
+ {
+  "id": 99,
+  "question": "Why might it be beneficial to use aliases for column names in a database query?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "49:04"
+ },
+ {
+  "id": 100,
+  "question": "How can you determine the percentage of empty or invalid data within a specific column?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "281:30"
+ },
+ {
+  "id": 101,
+  "question": "How do specialized GPTs interact with external applications like Canva?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "1461:06"
+ },
+ {
+  "id": 102,
+  "question": "How can you filter the results of a query that calculates the average salary by occupation?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "45:53"
+ },
+ {
+  "id": 103,
+  "question": "How can you extract a unique list of months from a dataset to use in a dictionary comprehension?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "450:27"
+ },
+ {
+  "id": 104,
+  "question": "How can you display both a data bar and a numeric value within the same cell using conditional formatting?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "110:27"
+ },
+ {
+  "id": 105,
+  "question": "Why is using the distinct keyword considered a resource-intensive operation?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "24:29"
+ },
+ {
+  "id": 106,
+  "question": "How do you create a new measure for an average value using DAX?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "26:30"
+ },
+ {
+  "id": 107,
+  "question": "How can you create a new database named \"SQL course\" using the provided interface?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "111:02"
+ },
+ {
+  "id": 108,
+  "question": "How many times will a trigger execute if an insert statement adds four records to a table?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "151:15"
+ },
+ {
+  "id": 109,
+  "question": "How can a loop be used to efficiently find the first dictionary entry that meets a specific criteria and then stop searching?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "152:04"
+ },
+ {
+  "id": 110,
+  "question": "How can you identify repeated employee identification numbers within a dataset?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "8:11"
+ },
+ {
+  "id": 111,
+  "question": "What steps are required to prepare a project for publication on GitHub?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "232:42"
+ },
+ {
+  "id": 112,
+  "question": "What happens to the visuals in Power BI when the start date filter is adjusted?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "182:46"
+ },
+ {
+  "id": 113,
+  "question": "How can you retrieve a specific piece of data from a column using its index position?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "1735:07"
+ },
+ {
+  "id": 114,
+  "question": "How can you merge data rows from multiple tables using SQL?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "68:19"
+ },
+ {
+  "id": 115,
+  "question": "Why is it beneficial to use NumPy alongside libraries like pandas, scikit-learn, and Matplotlib?",
+  "source": "youtube:wUSDVGivd-8",
+  "location": "255:22"
+ },
+ {
+  "id": 116,
+  "question": "How can you use the keyboard to clear filters in Excel?",
+  "source": "youtube:7QNgqq154gE",
+  "location": "7:10"
+ },
+ {
+  "id": 117,
+  "question": "What requirements must be met when combining two tables using the UNION operator?",
+  "source": "youtube:7mz73uXD9DA",
+  "location": "171:28"
+ },
+ {
+  "id": 118,
+  "question": "How can the data labels be adjusted to show percentages instead of counts?",
+  "source": "youtube:FwjaHCVNBWA",
+  "location": "116:24"
+ },
+ {
+  "id": 119,
+  "question": "Which two programming skills appear consistently across the majority of job postings being analyzed?",
+  "source": "youtube:MOzEvNYvbik",
+  "location": "222:11"
+ },
+ {
+  "id": 120,
+  "question": "What are the column headers used to organize employee information within the database?",
+  "source": "youtube:OT1RErkfLNQ",
+  "location": "9:10"
+ }
+]

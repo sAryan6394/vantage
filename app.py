@@ -17,6 +17,7 @@ from ingestion import ingest_text_file, ingest_youtube, ingest_pdf
 from vector_store import VectorStore
 from hybrid_search import HybridSearch
 from reranker import Reranker
+import rag_pipeline
 import telemetry
 
 load_dotenv()
@@ -462,20 +463,6 @@ def extract_youtube_id(url_or_id):
     return match.group(1) if match else url_or_id.strip()
 
 
-def build_contextual_query(current_question, history, max_history=2):
-    recent_user_msgs = [m["content"] for m in history if m["role"] == "user"][-max_history:]
-    return " ".join(recent_user_msgs + [current_question])
-
-
-def format_history(history, max_turns=4):
-    recent = history[-(max_turns * 2):]
-    lines = []
-    for m in recent:
-        role = "User" if m["role"] == "user" else "Assistant"
-        lines.append(f"{role}: {m['content']}")
-    return "\n".join(lines)
-
-
 TITLES_PATH = "source_titles.json"
 
 
@@ -753,75 +740,17 @@ with st.container(key="body_row" if show_sources else "body_row_full"):
                 autoscroll()  # follow the new question and spinner as they appear
                 question = pending_question
 
-                request_start = time.perf_counter()  # end-to-end timer
-                contextual_query = build_contextual_query(question, history_before)
-                query_embedding = model.encode(contextual_query)
-                embedding_latency_ms = (time.perf_counter() - request_start) * 1000
-
-                retrieval_start = time.perf_counter()
-                # Separate, cheap dense-only lookup purely for a true 0-1 cosine
-                # similarity score to log — the hybrid/reranked results below use
-                # RRF and cross-encoder scores, which aren't on a comparable scale.
-                dense_top = st.session_state.vector_store.search(query_embedding, top_k=1)
-                top_similarity_score = dense_top[0][0] if dense_top else 0.0
-
-                candidates = st.session_state.hybrid_search.search(contextual_query, query_embedding, top_k=15)
-                top_chunks = reranker.rerank(contextual_query, candidates, top_k=3)
-                retrieval_latency_ms = (time.perf_counter() - retrieval_start) * 1000
-
-                combined_context = "\n\n".join(
-                    f"[Source: {c['source']} @ {c['location']}]\n{c['text']}"
-                    for score, c in top_chunks
-                )
-
-                history_text = format_history(history_before)
-
-                prompt = f"""You are answering questions using ONLY the context provided below.
-
-Conversation so far:
-{history_text if history_text else "(no earlier messages)"}
-
-Context from sources:
-{combined_context}
-
-Current question: {question}
-
-Instructions: If the current question is a follow-up (like "explain more", "why", "what about that", etc.), use the conversation above to understand what it's referring to, then answer using the context. Write a clear, complete, well-explained answer in plain prose — no source citations, no brackets, no meta-commentary about where the information came from. If the answer genuinely isn't in the context, say "I don't know based on the provided notes."
-
-Answer:"""
-
                 with st.chat_message("assistant"):
                     with st.spinner("Searching your sources..."):
-                        # gemini-3.1-flash-lite: ~3x the rate limit of 3.6-flash
-                        # and far cheaper, fine for grounded QA over retrieved
-                        # context. Retry covers transient 503s on any tier.
-                        GENERATION_MODEL = "gemini-3.1-flash-lite"
-                        max_retries = 2
-                        last_error = None
-                        generation_latency_ms = 0.0
-                        response = None
+                        result = rag_pipeline.answer_question(
+                            question, history_before,
+                            model=model, client=client,
+                            vector_store=st.session_state.vector_store,
+                            hybrid_search=st.session_state.hybrid_search,
+                            reranker=reranker,
+                        )
 
-                        for attempt in range(max_retries + 1):
-                            attempt_start = time.perf_counter()
-                            try:
-                                response = client.models.generate_content(
-                                    model=GENERATION_MODEL,
-                                    contents=prompt
-                                )
-                                last_error = None
-                                generation_latency_ms = (time.perf_counter() - attempt_start) * 1000
-                                break
-                            except Exception as e:
-                                last_error = e
-                                generation_latency_ms = (time.perf_counter() - attempt_start) * 1000
-                                print(f"[Vantage] Generation attempt {attempt + 1} failed: {e}")
-                                if attempt < max_retries:
-                                    time.sleep(1.5 * (attempt + 1))
-
-                        generation_retries = attempt
-                        total_latency_ms = (time.perf_counter() - request_start) * 1000
-
-                    if last_error is not None:
+                    if result["error"]:
                         # No st.stop() here: it would also stop the rest of the
                         # page (including the input bar) from rendering.
                         st.markdown(
@@ -831,58 +760,16 @@ Answer:"""
                             '</div>',
                             unsafe_allow_html=True
                         )
-                        # Log the failure too, so error rate and latency stats
-                        # aren't flattered by counting only successful answers.
-                        try:
-                            telemetry.log_query(
-                                user_query=question,
-                                retrieval_latency_ms=retrieval_latency_ms,
-                                generation_latency_ms=generation_latency_ms,
-                                top_similarity_score=top_similarity_score,
-                                retrieved_chunks_count=len(top_chunks),
-                                prompt_tokens=0,
-                                completion_tokens=0,
-                                embedding_latency_ms=embedding_latency_ms,
-                                total_latency_ms=total_latency_ms,
-                                request_status="error",
-                                error_message=f"{type(last_error).__name__}: {str(last_error)[:200]}",
-                                generation_retries=generation_retries,
-                            )
-                        except Exception as e:
-                            print(f"[Vantage] Telemetry logging failed: {e}")
                     else:
-                        answer = response.text
-
-                        # Save immediately, before telemetry, which could still throw.
                         st.session_state.messages.append({
                             "role": "assistant",
-                            "content": answer,
-                            "confidence": top_similarity_score,
+                            "content": result["answer"],
+                            "confidence": result["top_similarity_score"],
                         })
                         save_messages()
-
-                        prompt_tokens = getattr(response.usage_metadata, "prompt_token_count", 0) or 0
-                        completion_tokens = getattr(response.usage_metadata, "candidates_token_count", 0) or 0
-
-                        try:
-                            query_id = telemetry.log_query(
-                                user_query=question,
-                                retrieval_latency_ms=retrieval_latency_ms,
-                                generation_latency_ms=generation_latency_ms,
-                                top_similarity_score=top_similarity_score,
-                                retrieved_chunks_count=len(top_chunks),
-                                prompt_tokens=prompt_tokens,
-                                completion_tokens=completion_tokens,
-                                embedding_latency_ms=embedding_latency_ms,
-                                total_latency_ms=total_latency_ms,
-                                generation_retries=generation_retries,
-                            )
-                            st.session_state.last_query_id = query_id
+                        if result["query_id"]:
+                            st.session_state.last_query_id = result["query_id"]
                             st.session_state.feedback_given = False
-                        except Exception as e:
-                            # Telemetry is a nice-to-have, not worth crashing an
-                            # otherwise-successful answer over.
-                            print(f"[Vantage] Telemetry logging failed: {e}")
 
                         # Rerun so the new answer renders through the normal
                         # history loop above.

@@ -1,0 +1,3 @@
+confidence_category,description,sort_order
+Low Confidence,Top similarity score below 0.45 — flags a likely knowledge gap,1
+High Confidence,Top similarity score at or above 0.45,2
