@@ -1,0 +1,36 @@
+{
+  "name": "Vantage Dark",
+  "dataColors": ["#F5D949", "#E5484D", "#6CB6FF", "#7EE0A8", "#B692F6", "#FF9F43", "#8B949E", "#4FD1C5"],
+  "background": "#14161A",
+  "foreground": "#E8EAED",
+  "foregroundNeutralSecondary": "#A8ADB5",
+  "foregroundNeutralTertiary": "#6B7078",
+  "tableAccent": "#F5D949",
+  "good": "#7EE0A8",
+  "neutral": "#F5D949",
+  "bad": "#E5484D",
+  "maximum": "#F5D949",
+  "center": "#FF9F43",
+  "minimum": "#6CB6FF",
+  "textClasses": {
+    "callout":  { "fontSize": 32, "fontFace": "Segoe UI Semibold", "color": "#E8EAED" },
+    "title":    { "fontSize": 14, "fontFace": "Segoe UI Semibold", "color": "#E8EAED" },
+    "header":   { "fontSize": 12, "fontFace": "Segoe UI Semibold", "color": "#A8ADB5" },
+    "label":    { "fontSize": 11, "fontFace": "Segoe UI", "color": "#A8ADB5" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "show": true, "color": { "solid": { "color": "#1D2026" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#2C313A" } }, "radius": 4 }],
+        "title": [{ "show": true, "fontColor": { "solid": { "color": "#E8EAED" } }, "fontSize": 14 }],
+        "visualHeader": [{ "show": false }]
+      }
+    },
+    "page": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#14161A" } }, "transparency": 0 }]
+      }
+    }
+  }
+}
