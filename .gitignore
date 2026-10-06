@@ -1,12 +1,13 @@
+.venv/
 venv/
 .env
 __pycache__/
 *.pyc
 vector_store.pkl
-rag_telemetry.db
 vector_store.faiss
 vector_store_meta.pkl
+rag_telemetry.db
+eval_telemetry.db
 powerbi_export/
 chat_history.pkl
-source_titles.jsoneval_telemetry.db
 source_titles.json
