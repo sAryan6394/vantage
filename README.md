@@ -17,8 +17,8 @@ Measured on 120 test questions in one session (see [Limits](#limits-read-before-
 | P95 time to answer | about 9.6 s |
 | Share of the wait spent in the Gemini call | about 87% |
 | Estimated cost per answer | $0.00038 ($0.046 for all 120) |
-| Answered rather than "I don't know" | 92% |
-| Correct passage in the top 3 results | 59% |
+| Answered rather than "I don't know" | 92% (110 of 120) |
+| Correct passage among the 3 passages sent to the model | 59% (71 of 120) |
 
 **Retrieval quality**: how often the passage a question was written from appears in the top k results (95% confidence interval in brackets).
 
